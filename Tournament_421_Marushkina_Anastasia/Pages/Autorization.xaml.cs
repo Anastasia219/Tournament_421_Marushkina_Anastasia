@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Tournament_421_Marushkina_Anastasia.Pages;
 
-namespace Tournament_421_Marushkina_Anastasia
+namespace Tournament_421_Marushkina_Anastasia.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Autorization.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Autorization : Page
     {
-        public MainWindow()
+        public Autorization()
         {
             InitializeComponent();
-            MyFrame.Navigate(new Autorization());
         }
     }
 }
