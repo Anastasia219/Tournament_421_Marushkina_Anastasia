@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c85ad4cbabc14c9ebd1819790892ef2b" Name="Diagram1">
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Applications" Width="1.5" PointX="8.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Format" Width="1.5" PointX="1.5" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Games" Width="1.5" PointX="1.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Match" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.MatchPlayer" Width="1.5" PointX="11.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.MatchTeam" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Role" Width="1.5" PointX="3.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Statistics" Width="1.5" PointX="8.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Status" Width="1.5" PointX="6" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.TeamRole" Width="1.5" PointX="3.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Teams" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Tournament" Width="1.5" PointX="1.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Type" Width="1.5" PointX="1.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="TournamentDB_421_Marushkina_AnastasiaModel.Users" Width="1.5" PointX="6" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Applications_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Applications_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Applications_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Games_Format" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Tournament_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Match_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_MatchPlayer_Match" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_MatchTeam_Match" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_MatchPlayer_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_MatchTeam_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Users_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Statistics_Tournament" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Statistics_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Users_TeamRole" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Users_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="TournamentDB_421_Marushkina_AnastasiaModel.FK_Tournament_Type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
