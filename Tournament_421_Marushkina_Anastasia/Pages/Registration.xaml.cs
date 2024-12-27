@@ -76,7 +76,7 @@ namespace Tournament_421_Marushkina_Anastasia.Pages
             
             var teams = TeamComboBox.SelectedItem as Teams;
             var role = RoleCb.SelectedItem as Role;
-            if (LoginTb.Text == "" || ParolTb.Password == "" || NikNameTb.Text == "" || PhoneTb.Text == "" || role == null || teams == null)
+            if (LoginTb.Text == "" || ParolTb.Password == "" || NikNameTb.Text == "" || PhoneTb.Text == "" )
             {
                 MessageBox.Show("Вы заполнили не все данные", "", MessageBoxButton.OK, MessageBoxImage.Error);
             }
@@ -87,8 +87,7 @@ namespace Tournament_421_Marushkina_Anastasia.Pages
                 user.NikName = NikNameTb.Text.Trim();
                         user.Phone = PhoneTb.Text.Trim();
                         user.Login = LoginTb.Text.Trim();
-                        user.TeamId = teams.ID;
-                       user.RoleID = role.ID;
+                   
 
                         App.db.Users.Add(user);
                         App.db.SaveChanges();

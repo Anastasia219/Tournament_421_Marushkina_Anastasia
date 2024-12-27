@@ -25,7 +25,15 @@
             </StackPanel>
         </StackPanel>
 
-
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal" Height="30" Width="523" Grid.Row="0">
+            <TextBlock Margin="15 5 0 0">Сортировки</TextBlock>
+            <ComboBox Height="30" Width="200" Margin="15 0" x:Name="SortCb" SelectionChanged="SortCb_SelectionChanged">
+                <ComboBoxItem>По умолчанию</ComboBoxItem>
+                <ComboBoxItem>По возрастанию</ComboBoxItem>
+                <ComboBoxItem>По убыванию</ComboBoxItem>
+            </ComboBox>
+            <TextBox Width="200" x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
+        </StackPanel>
         <ScrollViewer  Grid.Row="1" >
             <ListView FontSize="15" Grid.Row="1"  x:Name="MyList">
                 <ListView.View>

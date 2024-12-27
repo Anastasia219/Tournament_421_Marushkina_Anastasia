@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,40 @@ namespace Tournament_421_Marushkina_Anastasia.Pages
         {
             IEnumerable<Users> users = App.db.Users
        .Where(user => user.RoleID != 1 && user.RoleID != 3);
+            MyList.ItemsSource = users.ToList(); 
+            var Item = SortCb.SelectedItem;
+            if (Item != null)
+            {
+                if (SortCb.SelectedIndex == 0)
+                {
+                    users =     users.OrderBy(x => x.NikName);
+                }
+                else if (SortCb.SelectedIndex == 1)
+                {
+                    users = users.OrderByDescending(x => x.NikName);
+                }
+                else
+                {
+                    users = users.OrderBy(x => x.NikName);
+                }
+            }
+
+            if (SearchTb.Text != null)
+            {
+                users = users.Where(x => x.NikName.ToLower().Contains
+                (SearchTb.Text.ToLower()) || x.NikName.ToLower().Contains(SearchTb.Text.ToLower()));
+            }
             MyList.ItemsSource = users.ToList();
+           
+            
+        }
+        private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Refresh();
+        }
+        private void SortCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Refresh();
         }
 
         private void AddTournaments_Click(object sender, RoutedEventArgs e)
