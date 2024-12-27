@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Marushkina_Anastasia.Components;
 
 namespace Tournament_421_Marushkina_Anastasia.Pages
 {
@@ -23,6 +24,39 @@ namespace Tournament_421_Marushkina_Anastasia.Pages
         public Autorization()
         {
             InitializeComponent();
+            App.exitBtn.Visibility = Visibility.Hidden;
+            App.playerBtn.Visibility = Visibility.Collapsed;
+            App.applicationBtn.Visibility = Visibility.Collapsed;
+            App.rateBtn.Visibility = Visibility.Hidden;
+            App.tyrnirBtn.Visibility = Visibility.Hidden;
+            
+        }
+        private void EnterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string login = LoginTb.Text;
+            if (PassTb.Password == "" || LoginTb.Text =="")
+            {
+                MessageBox.Show("Вы не ввели логин или пароль");
+                return;
+            }
+            var loginUser = App.db.Users.FirstOrDefault(x => x.Login == login && x.Password == PassTb.Password);
+
+            if (loginUser != null)
+            {
+               App.currentUser = loginUser;
+               Navigation.NextPage(new ListPAge());
+            }
+            else
+                MessageBox.Show("Пользователь не найден.");
+        }
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Registration());
+        }
+
+        private void ZritelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ListPAge());
         }
     }
 }

@@ -9,6 +9,57 @@
       Title="Registration">
 
     <Grid>
-        
+        <Button  Margin="10,10,0,0"  Width="120" HorizontalAlignment="Left" VerticalAlignment="Top"  x:Name="BackBtn" Click="BackBtn_Click"  >Назад</Button>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+
+            <TextBlock FontSize="25" FontWeight="Bold" HorizontalAlignment="Center">Регистрация</TextBlock>
+            <StackPanel  Orientation="Horizontal">
+                <TextBlock FontSize="20" Width="200" >Игрок/Команда</TextBlock>
+                <ComboBox Name="ApplicationCb" FontSize="20" Width="100" SelectionChanged="ApplicationCb_SelectionChanged">
+                    <ComboBoxItem>Игрок</ComboBoxItem>
+                    <ComboBoxItem>Команда</ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Name="TeamSp" Visibility="Collapsed">
+                <TextBlock FontSize="20" Width="200" >Команда</TextBlock>
+                <ComboBox FontSize="20" Width="150" x:Name="TeamComboBox"  Margin="10,0,0,0" DisplayMemberPath="Name" >
+
+                     
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Name="RoleSp" Visibility="Collapsed" >
+                <TextBlock FontSize="20" Width="200" >Роль в команде</TextBlock>
+                <ComboBox FontSize="20" Width="150" x:Name="RoleCb"  Margin="10,0,0,0" DisplayMemberPath="Name" >
+                 
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Width="200">Никнейм</TextBlock>
+                <TextBox x:Name="NikNameTb" FontSize="20" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Width="200">Номер телефона</TextBlock>
+                <TextBox x:Name="PhoneTb" FontSize="20" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Width="200">Логин</TextBlock>
+                <TextBox x:Name="LoginTb" FontSize="20" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20" Width="200">Страна</TextBlock>
+                <TextBox x:Name="CountriTb" FontSize="20" Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="20"  Width="200">Пароль</TextBlock>
+                <PasswordBox FontSize="20" Name="ParolTb"  Width="100"></PasswordBox>
+            </StackPanel>
+           
+            <Button x:Name="RegBtn" FontSize="15" Click="RegBtn_Click" >Регистрация</Button>
+
+
+        </StackPanel>
+
     </Grid>
 </Page>

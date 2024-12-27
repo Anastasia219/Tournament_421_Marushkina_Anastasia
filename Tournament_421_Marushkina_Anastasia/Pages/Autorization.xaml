@@ -20,7 +20,6 @@
                 <PasswordBox FontSize="20" Name="PassTb"  Width="100"></PasswordBox>
             </StackPanel>
             <TextBlock   Margin="0,10,0,10" HorizontalAlignment="Center" FontFamily="Arial" FontWeight="Bold" FontStyle="Italic"><Hyperlink Click="Hyperlink_Click">-Регистрация как участника-</Hyperlink></TextBlock>
-            <!--<CheckBox Name="RememberCb" FontSize="15" Content="Запомнить меня" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10"/>-->
             <Button x:Name="EnterBtn" FontSize="15" Click="EnterBtn_Click">Войти</Button>
             <Button x:Name="ViewerBtn"  FontSize="15" Margin="0,20,0,0" Click="ZritelBtn_Click" >Войти как зритель</Button>
         </StackPanel>

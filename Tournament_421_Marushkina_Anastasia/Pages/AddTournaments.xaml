@@ -1,0 +1,116 @@
+﻿<Page x:Class="Tournament_421_Marushkina_Anastasia.Pages.AddTournaments"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_421_Marushkina_Anastasia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddTournaments">
+
+    <Grid Margin="0 0 10 0">
+
+
+       
+        <StackPanel  Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" Margin="0 0 0 0" HorizontalAlignment="Center">
+            <StackPanel x:Name="MainPanel" >
+                <TextBlock x:Name="TittleTb" FontSize="30" HorizontalAlignment="Center" Style="{StaticResource Heading}" Margin="0 0 0 40">Турнир</TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" x:Name="IdPanel" HorizontalAlignment="Center">
+                    <TextBlock  FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Id</TextBlock>
+                    <TextBox FontSize="20" IsEnabled="False" x:Name="IdTB" Width="250" Text="{Binding Id}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Наименование</TextBlock>
+                    <TextBox FontSize="20"  x:Name="NameTb" Width="250" Text="{Binding Name}"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Место</TextBlock>
+                    <ComboBox FontSize="20" x:Name="PlaceCb" SelectedItem="{Binding Place}" DisplayMemberPath="NameAndAddress" Width="250"></ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Дата и время начала</TextBlock>
+                    <DatePicker FontSize="20" x:Name="DateStartTB" Width="200"></DatePicker>
+                    <TextBox  x:Name="TimeStartTb" Text="{Binding datetime_start,StringFormat=hh\\:mm}" Width="40" Margin="10 0 0 0" >
+                        <TextBox.Style>
+                            <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <Style.Resources>
+                                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                        <VisualBrush.Visual>
+                                            <Label Content="ЧЧ:ММ" Foreground="#FF909090" FontWeight="DemiBold" />
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Style.Resources>
+                                <Style.Triggers>
+                                    <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="Text" Value="{x:Null}">
+                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="IsKeyboardFocused" Value="True">
+                                        <Setter Property="Background" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Дата и время конца</TextBlock>
+                    <DatePicker FontSize="20" x:Name="DateEndTB" Width="200" ></DatePicker>
+                    <TextBox  x:Name="TimeEndTb" Text="{Binding datetime_end,StringFormat=hh\\:mm}" Width="40" Margin="10 0 0 0" >
+                        <TextBox.Style>
+                            <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <Style.Resources>
+                                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                        <VisualBrush.Visual>
+                                            <Label Content="ЧЧ:ММ" Foreground="#FF909090" FontWeight="DemiBold" />
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Style.Resources>
+                                <Style.Triggers>
+                                    <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="Text" Value="{x:Null}">
+                                        <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                    </Trigger>
+                                    <Trigger Property="IsKeyboardFocused" Value="True">
+                                        <Setter Property="Background" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBox.Style>
+                    </TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Max. кол-во человек</TextBlock>
+                    <TextBox FontSize="20" x:Name="СountTb" Width="250"  Text="{Binding count_people}"></TextBox>
+                </StackPanel>
+                <StackPanel x:Name="OrganizatorPanel" Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" Margin="0 0 10 0" Width="85" VerticalAlignment="Center">Организатор</TextBlock>
+                    <TextBlock FontSize="20" x:Name="OrganizatorTb" Text="{Binding User1.FullName}" Width="250"></TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0 0 0 10" HorizontalAlignment="Center">
+                    <TextBlock FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 0 0 5">Описание</TextBlock>
+                    <TextBox Width="345" FontSize="20" Height="80" x:Name="DescriptionTb" TextWrapping="Wrap" Text="{Binding description}"></TextBox>
+                </StackPanel>
+                <Button x:Name="SaveBtn" FontSize="20"  Height="35" Margin="0 0 0 10">Сохранить</Button>
+                <Button x:Name="StatisticBtn" FontSize="20"   Height="35" >Создать отчет</Button>
+            </StackPanel>
+        </StackPanel>
+
+
+        <Button FontSize="20" x:Name="BackBtn" Width="100" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Click="BackBtn_Click" >Назад</Button>
+
+
+
+        <StackPanel x:Name="MyPanel"  RenderTransformOrigin="0.5,0.5" Visibility="Collapsed" Background="White" HorizontalAlignment="Right" Width="300" Grid.ColumnSpan="2" >
+            <StackPanel.RenderTransform>
+                <TranslateTransform x:Name="myTranslateTransform"></TranslateTransform>
+            </StackPanel.RenderTransform>
+
+
+        </StackPanel>
+    </Grid>
+</Page>

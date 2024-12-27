@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Tournament_421_Marushkina_Anastasia.Components;
 using Tournament_421_Marushkina_Anastasia.Pages;
 
 namespace Tournament_421_Marushkina_Anastasia
@@ -24,7 +25,40 @@ namespace Tournament_421_Marushkina_Anastasia
         public MainWindow()
         {
             InitializeComponent();
+            Navigation.MainWindow = this;
+
+            App.exitBtn = ExitBtn;
+            App.tyrnirBtn = TyrnirBtn;
+            App.rateBtn = RateBtn;
+            App.playerBtn = PlayerBtn;
+            App.applicationBtn = ApplicationBtn;
             MyFrame.Navigate(new Autorization());
+        }
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new Autorization());
+            App.currentUser = null;
+        }
+
+
+        private void TyrnirBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new ListPAge());
+        }
+
+        private void RateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new RatePage());
+        }
+
+        private void PlayerBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MyFrame.Navigate(new PlayerPage());
+        }
+
+        private void ApplicationBtn_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

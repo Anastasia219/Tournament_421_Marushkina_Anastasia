@@ -10,11 +10,11 @@ none
 false
 TRACE
 C:\Users\User\source\repos\Tournament_421_Marushkina_Anastasia\Tournament_421_Marushkina_Anastasia\App.xaml
-3-1680993795
+71593813240
 21906734957
-26-1317278897
+301410203788
 181411966869
-MainWindow.xaml;Pages\Autorization.xaml;Pages\Registration.xaml;
+MainWindow.xaml;Pages\AddTournaments.xaml;Pages\Autorization.xaml;Pages\ListPAge.xaml;Pages\PlayerPage.xaml;Pages\RatePage.xaml;Pages\Registration.xaml;
 
 True
 

@@ -1,0 +1,43 @@
+﻿<Page x:Class="Tournament_421_Marushkina_Anastasia.Pages.RatePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Tournament_421_Marushkina_Anastasia.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RatePage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="533*"/>
+        </Grid.RowDefinitions>
+       
+
+        <StackPanel Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+            <TextBlock x:Name="TitleTb" FontSize="27" Margin="0 0 10 0 " VerticalAlignment="Center">Рейтинг</TextBlock>
+
+            <TextBlock FontSize="20" Margin="10 0 0 0" VerticalAlignment="Center">Фильтровать</TextBlock>
+            <ComboBox x:Name="FilterCb" Height="25" Width="150" Margin="10 0">
+                <ComboBoxItem>все</ComboBoxItem>
+                <ComboBoxItem>за месяц</ComboBoxItem>
+                <ComboBoxItem>за год</ComboBoxItem>
+
+            </ComboBox>
+
+        </StackPanel>
+
+
+        <ScrollViewer  Grid.Row="1" >
+            <ListView FontSize="15" Grid.Row="1"  x:Name="MyList">
+                <ListView.View>
+                    <GridView>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+
+    </Grid>
+</Page>
